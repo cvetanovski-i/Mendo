@@ -1,8 +1,8 @@
 package elc09.floors;
 
 public class Floor implements Comparable<Floor> {
-    private int numberOfFloor;
-    private boolean willBallBreak;
+    private final int numberOfFloor;
+    private final boolean willBallBreak;
 
     public Floor(int numberOfFloor, String willBallBreak) {
         this.numberOfFloor = numberOfFloor;
@@ -24,13 +24,5 @@ public class Floor implements Comparable<Floor> {
     @Override
     public int compareTo(Floor o) {
         return Integer.compare(numberOfFloor, o.numberOfFloor);
-    }
-
-    @Override
-    public String toString() {
-        return "Floor{" +
-                "numberOfFloor=" + numberOfFloor +
-                ", willBallBreak=" + willBallBreak +
-                '}';
     }
 }
